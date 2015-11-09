@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+#DEB_MAKE_CHECK_TARGET = test_rublebit
+#build/rublebitd::
+#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_rublebit)
+
+DEB_INSTALL_EXAMPLES_rublebitd += debian/examples/*
+DEB_INSTALL_MANPAGES_rublebitd += debian/manpages/*
+
+%:
+	dh --with bash-completion $@
+
+override_dh_auto_build:
+	cd src; $(MAKE) -f makefile.unix rublebitd
+	$(MAKE)
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f rublebit-qt; fi
+	cd src; $(MAKE) -f makefile.unix clean
+
+override_dh_auto_configure:
+	qmake rublebit-qt.pro USE_QRCODE=1
+
+override_dh_auto_test:
+	cd src; $(MAKE) -f makefile.unix test_rublebit
+	src/test_rublebit
+
+# Ensure wrapper is set executable
+binary-post-install/rublebitd:
+	chmod +x $(cdbs_curdestdir)usr/bin/rublebitd
+binary-post-install/rublebit-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/rublebit-qt

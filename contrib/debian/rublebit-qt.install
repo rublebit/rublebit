@@ -1,0 +1,6 @@
+rublebit-qt usr/bin
+share/pixmaps/rublebit32.xpm usr/share/pixmaps
+share/pixmaps/rublebit16.xpm usr/share/pixmaps
+share/pixmaps/rublebit128.png usr/share/pixmaps
+debian/rublebit-qt.desktop usr/share/applications
+debian/rublebit-qt.protocol usr/share/kde4/services/

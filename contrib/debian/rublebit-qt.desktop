@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=RubleBit
+Comment=RubleBit P2P Cryptocurrency
+Comment[fr]=RubleBit, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=RubleBit, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/rublebit-qt %u
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/rublebit128.png
+MimeType=x-scheme-handler/rublebit;
+Categories=Office;
