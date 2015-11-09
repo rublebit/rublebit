@@ -170,14 +170,14 @@ color: rgb(85, 170, 255);</string>
      <item>
       <widget class="QLabel" name="label_5">
        <property name="text">
-        <string>Social:         twitter.com/rublebit.info</string>
+        <string>Social:         twitter.com/rublebit</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_6">
        <property name="text">
-        <string>Source:       github.com/rublebit-project/rublebit</string>
+        <string>Source:       github.com/rublebit/rublebit</string>
        </property>
       </widget>
      </item>
