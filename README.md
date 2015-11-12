@@ -12,12 +12,12 @@ What is RubleBit?
 
 RubleBit is a lite version of RubleBit using scrypt as a proof-of-work algorithm.
  - 30 second block targets
- - subsidy halves in 840k blocks (~4 years)
- - ~184 million total coins
+ - subsidy halves in 1000k blocks (~2 years)
+ - ~100 million total coins
 
 The rest is the same as RubleBit.
- - 1 coins per block
- - 10 blocks to retarget difficulty
+ - 40 coins per block
+ - 5 blocks to retarget difficulty
 
 For more information, as well as an immediately useable, binary version of
 the RubleBit client sofware, see http://www.rublebit.info.
